@@ -1,0 +1,126 @@
+body {
+    font-family: "SN Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    background-color: #FAFAF0;
+}
+
+.visualization-container {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(1);
+}
+
+.disc {
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.disc-title {
+    width: 60%;
+    font-weight: bold;
+    font-size: large;
+}
+
+.disc-date {
+    width: 100%;
+}
+
+.disc-url {
+    width: 100%;
+    color: #E5446D;
+}
+
+.disc-svg {
+    margin: auto;
+    width: 60%;
+    aspect-ratio: 3 / 1;
+}
+
+.visualization {
+    margin: auto;
+    display: block;
+}
+
+.column {
+    width: 60%;
+    margin: auto;
+    display: block;
+    padding: 1%;
+}
+
+p {
+    width: 80%;
+    margin: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.caption {
+    width: 50%;
+}
+
+img {
+    width: 50%;
+    margin-left: 25%;;
+}
+
+@media screen and (max-width: 2000px) {
+    .visualization-container {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .column {
+        width: 70%;
+    }
+
+    .visualization-container {
+        width: 95%;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 1280px) {
+    .column {
+        width: 95%;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    p.caption {
+        width: 85%;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-width: 736px) {
+    .column {
+        width: 98%;
+    }
+
+    img {
+        width: 95%;
+    }
+
+    p.caption {
+        width: 95%;
+    }
+
+    .disc-title {
+        width: 98%;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    .visualization-container {
+        width: 98%;
+    }
+}

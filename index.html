@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html style="height: 100vh;">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="images/favicon-32x32.png">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    </head>
+    <body style="margin: 0; min-height: 100vh;">
+        <div class="column">
+            <h1 style="text-align: center; margin-bottom: 0; font-weight: 500;">Rejections (and Acceptances)</h1>
+            <div style="text-align: center;">
+                <p style="padding: 0; margin-top: 0;">April 30, 2025</p>
+                <p style="padding-top: 0; margin-top: 0;">Mara Solen</p>
+            </div>
+            <p>
+                I've faced a lot of rejections lately, with three of my last four authored and co-authored 
+                papers as well as one grant and one fellowship all being being rejected. Two of the rejected 
+                papers are supposed to be in my thesis, I still have two additional in-progress papers that
+                must be in my thesis, and failing to get the fellowship means that I have to finish my PhD 
+                sooner rather than later. All of this together means that I need to finish four full papers 
+                by the end of the summer, which is stressful!
+            </p>
+            <p>
+                Because I've been thinking about these rejections and trying to stay motivated despite them,
+                I decided to take a look at something that I have thought was funny in the past. When you
+                submit a research paper, it is peer-reviewed by a set of reviewers. In my field, the systems
+                that we use to review force us to select a rating for the paper overall, reviewer expertise 
+                level, and often a few specific attributes about the paper like novelty, utility, and rigor.
+                These ratings are typically given on likert scales. One thing I've noticed in the past is 
+                that I've gotten reviews where two reviewers choose options on opposite ends of the rating
+                scale for one of these attributes! For example, I submitted a paper for which one reviewer 
+                put a 5/5 (excellent) for the research rigor, and another put 1/5 (fundamentally flawed). 
+            </p>
+            <p>
+                This observation led to my interest in exploring how consistently my past reviewers have 
+                rated my papers. In the visualizations below, each loop represents one paper version that
+                was reviewed. Loops that overlap are part of the same submission cycle, as some venues
+                like the CHI conference or TVCG journal include multiple review rounds where all reviewers 
+                assess the submission. If the loops are very circular, it means that reviewers largely
+                agreed, while loops that are very misshapen indicate that reviewers did not agree. The 
+                bigger the loop is, the higher the ratings. The colour represents the results of the 
+                reviewing round, with green meaning revisions requested, brown meaning reject, and pink
+                meaning accept. I chose this colour scheme to be like a flower that is growing (green)
+                and then either blooms (pink, accepted) or dies (brown, rejected), because many of these
+                papers needed multiple <i>seasons</i> before finally properly blooming.
+            </p>
+            <p>
+                I think it's interesting how many of my submissions have strong reviewer disagreement. At
+                the same time, it's interesting to me that the ones that do eventually get published 
+                definitely become rounder and bigger over time, which makes sense.
+            </p>
+        </div>
+
+        <div id="visualization-container" class="visualization-container" first-render="true">
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/dayOfYear.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
